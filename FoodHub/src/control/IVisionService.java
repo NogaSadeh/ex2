@@ -1,6 +1,6 @@
 package control;
 
-import Objects.Ingredient;
+import Entity.Ingredient;
 import java.util.ArrayList;
 
 public interface IVisionService {

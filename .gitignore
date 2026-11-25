@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!FoodHub/lib/*.jar
 *.war
 *.nar
 *.ear

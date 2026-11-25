@@ -1,4 +1,4 @@
-package Objects;
+package Entity;
 
 import java.util.ArrayList;
 
@@ -36,4 +36,13 @@ public class Allergen {
     public String toString() {
         return allergenCode + " - " + name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this == obj || obj instanceof Allergen
+                && java.util.Objects.equals(allergenCode, ((Allergen) obj).allergenCode);
+    }
+
+    @Override
+    public int hashCode() { return java.util.Objects.hashCode(allergenCode); }
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allergenCatalog id="90" lastUpdated="2026-11-25">
+    <allergen code="TEST_GLUTEN" name="Test gluten" description="Contains wheat.">
+        <ingredient id="900001" name="Test wheat"/>
+    </allergen>
+    <allergen code="TEST_NUTS" name="Test nuts" description="Contains nuts.">
+        <ingredient id="900002" name="Test almonds"/>
+    </allergen>
+</allergenCatalog>

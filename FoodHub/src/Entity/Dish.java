@@ -1,4 +1,4 @@
-package Objects;
+package Entity;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,7 @@ public class Dish {
     private String foodType;
     private String imagePath;
     private double price;
+    private String ingredientStatus = "GENERATED";
     private ArrayList<Ingredient> ingredients;
 
     public Dish(int dishId, int stallNumber, String name, String foodType, String imagePath, double price) {
@@ -39,6 +40,9 @@ public class Dish {
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
 
+    public String getIngredientStatus() { return ingredientStatus; }
+    public void setIngredientStatus(String ingredientStatus) { this.ingredientStatus = ingredientStatus; }
+
     public ArrayList<Ingredient> getIngredients() { return ingredients; }
     public void setIngredients(ArrayList<Ingredient> ingredients) { this.ingredients = ingredients; }
 
@@ -46,4 +50,12 @@ public class Dish {
     public String toString() {
         return name + " (" + foodType + ")";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this == obj || obj instanceof Dish && dishId == ((Dish) obj).dishId;
+    }
+
+    @Override
+    public int hashCode() { return Integer.hashCode(dishId); }
 }
